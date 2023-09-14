@@ -1,0 +1,95 @@
+/* Resetting some default margins and padding */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden; /* Prevents potential scroll bars */
+}
+
+.slider {
+    width: 100vw; /* Viewport Width */
+    height: 100vh; /* Viewport Height */
+    position: relative;
+    overflow: hidden;
+    border-radius: 0; /* Removes the rounded corners for fullscreen */
+}
+
+.slide {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    transition: all 0.5s;
+}
+
+.slide img {
+    width: 100%;
+    height: 80%;
+    object-fit: cover; /* Ensures images cover the entire slide */
+}
+
+.btn {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    padding: 10px;
+    border: none;
+    border-radius: 50%;
+    z-index: 10; /* Makes sure the button is above the slide */
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.7); /* Adds slight transparency */
+    font-size: 18px;
+    outline: none; /* Removes the default outline */
+}
+
+.btn:active {
+    transform: scale(1.1); /* A little scaling effect on button press */
+}
+
+.btn-prev {
+    top: 45%;
+    left: 2%;
+}
+
+.btn-next {
+    top: 45%;
+    right: 2%;
+}
+/*navbar design*/
+.menu-bar{
+    background-color: white;
+    text-align: left;
+}
+.menu-bar ul{
+    display: inline-flex;
+    list-style-type: none;
+}
+.menu-bar ul li{
+    width: fit-content;
+    margin: 3px;
+    padding: 6px;
+}
+.menu-bar ul li a{
+    text-decoration: none;
+    color: black;
+}
+.submenu1{
+    display: none;
+}
+.menu-bar ul  li:hover .submenu1 {
+    display: block;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.7);
+    margin: 15px;
+    margin-left: -15px;
+}
+.menu-bar ul li:hover .submenu1 ul{
+    display: block;
+    margin: 20px;
+}
+.menu-bar img{
+    display: inline-block;
+    align-items:center;
+    justify-content: center;
+    margin-left: 280px;
+   
+}
